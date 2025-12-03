@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8302F4892EB1B9C2006ECC09 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302F4882EB1B9C2006ECC09 /* CFNetwork.framework */; };
+		832ABA742E28EDB90037ABF1 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832ABA732E28EDB90037ABF1 /* Metal.framework */; };
+		832ABA762E28EDC10037ABF1 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832ABA752E28EDC10037ABF1 /* MetalKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		832AB9EC2E28EAC20037ABF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832AB9D52E28EABF0037ABF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 832AB9DC2E28EABF0037ABF1;
+			remoteInfo = RayTracingCS660;
+		};
+		832AB9F62E28EAC20037ABF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832AB9D52E28EABF0037ABF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 832AB9DC2E28EABF0037ABF1;
+			remoteInfo = RayTracingCS660;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8302F4882EB1B9C2006ECC09 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		832AB9DD2E28EABF0037ABF1 /* DistributedRayTracingCS660.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistributedRayTracingCS660.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		832AB9EB2E28EAC20037ABF1 /* DistributedRayTracingCS660Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistributedRayTracingCS660Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		832AB9F52E28EAC20037ABF1 /* DistributedRayTracingCS660UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistributedRayTracingCS660UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		832ABA732E28EDB90037ABF1 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		832ABA752E28EDC10037ABF1 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		832ABA372E28EBF80037ABF1 /* Exceptions for "RayTracingCS660" folder in "DistributedRayTracingCS660" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 832AB9DC2E28EABF0037ABF1 /* DistributedRayTracingCS660 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		832AB9DF2E28EABF0037ABF1 /* RayTracingCS660 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				832ABA372E28EBF80037ABF1 /* Exceptions for "RayTracingCS660" folder in "DistributedRayTracingCS660" target */,
+			);
+			path = RayTracingCS660;
+			sourceTree = "<group>";
+		};
+		832AB9EE2E28EAC20037ABF1 /* RayTracingCS660Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RayTracingCS660Tests;
+			sourceTree = "<group>";
+		};
+		832AB9F82E28EAC20037ABF1 /* RayTracingCS660UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RayTracingCS660UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		832AB9DA2E28EABF0037ABF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8302F4892EB1B9C2006ECC09 /* CFNetwork.framework in Frameworks */,
+				832ABA762E28EDC10037ABF1 /* MetalKit.framework in Frameworks */,
+				832ABA742E28EDB90037ABF1 /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832AB9E82E28EAC20037ABF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832AB9F22E28EAC20037ABF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		832AB9D42E28EABF0037ABF1 = {
+			isa = PBXGroup;
+			children = (
+				832AB9DF2E28EABF0037ABF1 /* RayTracingCS660 */,
+				832AB9EE2E28EAC20037ABF1 /* RayTracingCS660Tests */,
+				832AB9F82E28EAC20037ABF1 /* RayTracingCS660UITests */,
+				832ABA722E28EDB80037ABF1 /* Frameworks */,
+				832AB9DE2E28EABF0037ABF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		832AB9DE2E28EABF0037ABF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				832AB9DD2E28EABF0037ABF1 /* DistributedRayTracingCS660.app */,
+				832AB9EB2E28EAC20037ABF1 /* DistributedRayTracingCS660Tests.xctest */,
+				832AB9F52E28EAC20037ABF1 /* DistributedRayTracingCS660UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832ABA722E28EDB80037ABF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8302F4882EB1B9C2006ECC09 /* CFNetwork.framework */,
+				832ABA752E28EDC10037ABF1 /* MetalKit.framework */,
+				832ABA732E28EDB90037ABF1 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		832AB9DC2E28EABF0037ABF1 /* DistributedRayTracingCS660 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832AB9FF2E28EAC20037ABF1 /* Build configuration list for PBXNativeTarget "DistributedRayTracingCS660" */;
+			buildPhases = (
+				832AB9D92E28EABF0037ABF1 /* Sources */,
+				832AB9DA2E28EABF0037ABF1 /* Frameworks */,
+				832AB9DB2E28EABF0037ABF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				832AB9DF2E28EABF0037ABF1 /* RayTracingCS660 */,
+			);
+			name = DistributedRayTracingCS660;
+			packageProductDependencies = (
+			);
+			productName = RayTracingCS660;
+			productReference = 832AB9DD2E28EABF0037ABF1 /* DistributedRayTracingCS660.app */;
+			productType = "com.apple.product-type.application";
+		};
+		832AB9EA2E28EAC20037ABF1 /* DistributedRayTracingCS660Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832ABA022E28EAC20037ABF1 /* Build configuration list for PBXNativeTarget "DistributedRayTracingCS660Tests" */;
+			buildPhases = (
+				832AB9E72E28EAC20037ABF1 /* Sources */,
+				832AB9E82E28EAC20037ABF1 /* Frameworks */,
+				832AB9E92E28EAC20037ABF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				832AB9ED2E28EAC20037ABF1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				832AB9EE2E28EAC20037ABF1 /* RayTracingCS660Tests */,
+			);
+			name = DistributedRayTracingCS660Tests;
+			packageProductDependencies = (
+			);
+			productName = RayTracingCS660Tests;
+			productReference = 832AB9EB2E28EAC20037ABF1 /* DistributedRayTracingCS660Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		832AB9F42E28EAC20037ABF1 /* DistributedRayTracingCS660UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832ABA052E28EAC20037ABF1 /* Build configuration list for PBXNativeTarget "DistributedRayTracingCS660UITests" */;
+			buildPhases = (
+				832AB9F12E28EAC20037ABF1 /* Sources */,
+				832AB9F22E28EAC20037ABF1 /* Frameworks */,
+				832AB9F32E28EAC20037ABF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				832AB9F72E28EAC20037ABF1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				832AB9F82E28EAC20037ABF1 /* RayTracingCS660UITests */,
+			);
+			name = DistributedRayTracingCS660UITests;
+			packageProductDependencies = (
+			);
+			productName = RayTracingCS660UITests;
+			productReference = 832AB9F52E28EAC20037ABF1 /* DistributedRayTracingCS660UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		832AB9D52E28EABF0037ABF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					832AB9DC2E28EABF0037ABF1 = {
+						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
+					};
+					832AB9EA2E28EAC20037ABF1 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 832AB9DC2E28EABF0037ABF1;
+					};
+					832AB9F42E28EAC20037ABF1 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 832AB9DC2E28EABF0037ABF1;
+					};
+				};
+			};
+			buildConfigurationList = 832AB9D82E28EABF0037ABF1 /* Build configuration list for PBXProject "DistributedRayTracingCS660" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 832AB9D42E28EABF0037ABF1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 832AB9DE2E28EABF0037ABF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				832AB9DC2E28EABF0037ABF1 /* DistributedRayTracingCS660 */,
+				832AB9EA2E28EAC20037ABF1 /* DistributedRayTracingCS660Tests */,
+				832AB9F42E28EAC20037ABF1 /* DistributedRayTracingCS660UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		832AB9DB2E28EABF0037ABF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832AB9E92E28EAC20037ABF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832AB9F32E28EAC20037ABF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		832AB9D92E28EABF0037ABF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832AB9E72E28EAC20037ABF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832AB9F12E28EAC20037ABF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		832AB9ED2E28EAC20037ABF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 832AB9DC2E28EABF0037ABF1 /* DistributedRayTracingCS660 */;
+			targetProxy = 832AB9EC2E28EAC20037ABF1 /* PBXContainerItemProxy */;
+		};
+		832AB9F72E28EAC20037ABF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 832AB9DC2E28EABF0037ABF1 /* DistributedRayTracingCS660 */;
+			targetProxy = 832AB9F62E28EAC20037ABF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		832AB9FD2E28EAC20037ABF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RTTS5V7UBX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		832AB9FE2E28EAC20037ABF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RTTS5V7UBX;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		832ABA002E28EAC20037ABF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RayTracingCS660/RayTracingCS660.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTTS5V7UBX;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RayTracingCS660/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngxial.com.RayTracingCS660;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RayTracingCS660/RayTracingCS660-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		832ABA012E28EAC20037ABF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RayTracingCS660/RayTracingCS660.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTTS5V7UBX;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RayTracingCS660/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = ngxial.com.RayTracingCS660;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RayTracingCS660/RayTracingCS660-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		832ABA032E28EAC20037ABF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTTS5V7UBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngxial.com.RayTracingCS660Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DistributedRayTracingCS660.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DistributedRayTracingCS660";
+			};
+			name = Debug;
+		};
+		832ABA042E28EAC20037ABF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTTS5V7UBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngxial.com.RayTracingCS660Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DistributedRayTracingCS660.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DistributedRayTracingCS660";
+			};
+			name = Release;
+		};
+		832ABA062E28EAC20037ABF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTTS5V7UBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngxial.com.RayTracingCS660UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RayTracingCS660;
+			};
+			name = Debug;
+		};
+		832ABA072E28EAC20037ABF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTTS5V7UBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngxial.com.RayTracingCS660UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RayTracingCS660;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		832AB9D82E28EABF0037ABF1 /* Build configuration list for PBXProject "DistributedRayTracingCS660" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832AB9FD2E28EAC20037ABF1 /* Debug */,
+				832AB9FE2E28EAC20037ABF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832AB9FF2E28EAC20037ABF1 /* Build configuration list for PBXNativeTarget "DistributedRayTracingCS660" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832ABA002E28EAC20037ABF1 /* Debug */,
+				832ABA012E28EAC20037ABF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832ABA022E28EAC20037ABF1 /* Build configuration list for PBXNativeTarget "DistributedRayTracingCS660Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832ABA032E28EAC20037ABF1 /* Debug */,
+				832ABA042E28EAC20037ABF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832ABA052E28EAC20037ABF1 /* Build configuration list for PBXNativeTarget "DistributedRayTracingCS660UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832ABA062E28EAC20037ABF1 /* Debug */,
+				832ABA072E28EAC20037ABF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 832AB9D52E28EABF0037ABF1 /* Project object */;
+}
