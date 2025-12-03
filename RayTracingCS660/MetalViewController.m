@@ -288,61 +288,64 @@
 }
 
 // 新增這個方法！
+// 關鍵修正：上下翻轉！
+// 目前是配合 cuda client 的計算,之後要考慮其他異質 client 平台
+/*
+ 
+ 來源平台傳回的 binary 第0行代表在 macOS Metal 上貼是否正確？存 PNG 時是否需要翻轉？Jetson (CUDA)畫面最上面正確（直接貼）需要！（存圖時）MacBook (Metal)畫面最上面正確（直接貼）需要！（存圖時）Windows (CUDA)畫面最上面正確（直接貼）需要！（存圖時）
+ 顯示永遠正確（因為 Metal 吃得懂）
+ 存圖永遠需要手動翻轉（因為 CGContext 吃不懂）
+ 
+ 
+ */
 - (void)saveFinalTextureAsPNG {
-    if (!self.finalTexture) {
-        NSLog(@"No final texture");
-        return;
-    }
+    if (!self.finalTexture) return;
     
-    // 1. 建立 CPU 可讀的 buffer
-    NSUInteger width = 800;
-    NSUInteger height = 600;
-    NSUInteger bytesPerRow = 4 * width;
-    id<MTLBuffer> cpuBuffer = [self.device newBufferWithLength:bytesPerRow * height
-                                                        options:MTLResourceStorageModeShared];
-    
-    // 2. 用 Blit 複製 GPU texture → CPU buffer
-    id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
-    id<MTLBlitCommandEncoder> blit = [commandBuffer blitCommandEncoder];
-    
+    // 1. 複製到 CPU buffer
+    NSUInteger w = 800, h = 600, rowBytes = 4 * w;
+    id<MTLBuffer> buffer = [self.device newBufferWithLength:rowBytes * h
+                                                    options:MTLResourceStorageModeShared];
+    id<MTLCommandBuffer> cmd = [self.commandQueue commandBuffer];
+    id<MTLBlitCommandEncoder> blit = [cmd blitCommandEncoder];
     [blit copyFromTexture:self.finalTexture
               sourceSlice:0 sourceLevel:0 sourceOrigin:MTLOriginMake(0,0,0)
-               sourceSize:MTLSizeMake(width, height, 1)
-                 toBuffer:cpuBuffer
-        destinationOffset:0
-   destinationBytesPerRow:bytesPerRow
- destinationBytesPerImage:0];
-    
+               sourceSize:MTLSizeMake(w,h,1)
+                 toBuffer:buffer destinationOffset:0
+           destinationBytesPerRow:rowBytes destinationBytesPerImage:0];
     [blit endEncoding];
-    [commandBuffer commit];
-    [commandBuffer waitUntilCompleted];
+    [cmd commit];
+    [cmd waitUntilCompleted];
     
-    // 3. 直接讀 buffer！
-    uint8_t *pixelData = (uint8_t *)cpuBuffer.contents;
+    uint8_t *src = buffer.contents;
     
-    // 4. 存圖
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(pixelData,
-                                                 width, height, 8, bytesPerRow,
-                                                 colorSpace,
-                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-    
-    CGImageRef imageRef = CGBitmapContextCreateImage(context);
-    
-    NSString *desktopPath = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES).firstObject;
-    NSString *filePath = [desktopPath stringByAppendingPathComponent:@"distribute_ray_tracing_output.png"];
-    NSURL *url = [NSURL fileURLWithPath:filePath];
-    
-    CGImageDestinationRef dest = CGImageDestinationCreateWithURL((__bridge CFURLRef)url, kUTTypePNG, 1, NULL);
-    if (dest) {
-        CGImageDestinationAddImage(dest, imageRef, NULL);
-        CGImageDestinationFinalize(dest);
-        CFRelease(dest);
-        NSLog(@"三球光追圖片已成功儲存：%@", filePath);
+    // 2. 手動翻轉（永遠需要！）
+    uint8_t *flipped = malloc(rowBytes * h);
+    for (int y = 0; y < h; y++) {
+        memcpy(flipped + y * rowBytes,
+               src + (h - 1 - y) * rowBytes,
+               rowBytes);
     }
     
-    CGImageRelease(imageRef);
-    CGContextRelease(context);
-    CGColorSpaceRelease(colorSpace);
+    // 3. 用翻轉後的資料存圖
+    CGColorSpaceRef cs = CGColorSpaceCreateDeviceRGB();
+    CGContextRef ctx = CGBitmapContextCreate(flipped, w, h, 8, rowBytes, cs,
+                                             kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+    CGImageRef img = CGBitmapContextCreateImage(ctx);
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES).firstObject
+                      stringByAppendingPathComponent:@"distribute_ray_tracing_output.png"];
+    CFURLRef url = (__bridge CFURLRef)[NSURL fileURLWithPath:path];
+    CGImageDestinationRef dest = CGImageDestinationCreateWithURL(url, kUTTypePNG, 1, NULL);
+    CGImageDestinationAddImage(dest, img, nil);
+    CGImageDestinationFinalize(dest);
+    
+    CFRelease(dest);
+    CGImageRelease(img);
+    CGContextRelease(ctx);
+    CGColorSpaceRelease(cs);
+    free(flipped);
+    
+    NSLog(@"完美圖片已儲存（已修正方向）：%@", path);
 }
+
 @end
